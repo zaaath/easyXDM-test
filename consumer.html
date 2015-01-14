@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Consumet - easyXDM example</title>
+		<title>Consumer - easyXDM example</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/easyXDM/2.4.17.1/easyXDM.debug.js"></script>
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 
 			var socket = new easyXDM.Socket({
 				remote: "provider.html",
-				container: "placeholder",
+				container: document.getElementById("placeholder"),
 				onMessage: function (message, origin) {
 					console.log("Message <", message, "> received from <", origin, ">");
 				},
