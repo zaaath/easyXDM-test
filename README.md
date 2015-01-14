@@ -1,4 +1,4 @@
-This is a simple example application that shows easyXDM
+This is a simple example application that shows easyXDM. Instructions are taken from http://easyxdm.net/wp/2010/03/17/setting-up-your-first-socket/
 
 RUN
 ---
