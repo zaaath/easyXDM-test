@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Provider - easyXDM example</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/easyXDM/2.4.17.1/easyXDM.debug.js"></script>
+	</head>
+	<body>
+		This is Provider. Check console for information
+		<script>
+			console.log("Provider launched");
+
+			var socket = new easyXDM.Socket({
+				onMessage: function(message, origin) {
+					console.log("Message <", message ,"> received from <", origin, ">");
+					socket.postMessage("This is a response from Provider app");
+				}
+			});
+		</script>
+	</body>
+</html>

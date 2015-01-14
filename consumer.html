@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Consumet - easyXDM example</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/easyXDM/2.4.17.1/easyXDM.debug.js"></script>
+	</head>
+	<body>
+		This is Consumer. Check console for information
+		<script>
+			console.log("Consumer launched");
+
+			var socket = new easyXDM.Socket({
+				remote: "provider.html",
+				onMessage: function (message, origin) {
+					console.log("Message <", message, "> received from <", origin, ">");
+				},
+				onReady: function () {
+					socket.postMessage("Is it working?");
+				}
+			});
+		</script>
+	</body>
+</html>
