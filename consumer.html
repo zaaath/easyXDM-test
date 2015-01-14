@@ -6,11 +6,15 @@
 	</head>
 	<body>
 		This is Consumer. Check console for information
+
+		<div id="placeholder"></div>
+
 		<script>
 			console.log("Consumer launched");
 
 			var socket = new easyXDM.Socket({
 				remote: "provider.html",
+				container: "placeholder",
 				onMessage: function (message, origin) {
 					console.log("Message <", message, "> received from <", origin, ">");
 				},
